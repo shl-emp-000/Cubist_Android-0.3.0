@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textViewMacAddress"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter MAC address (For testing only, change before you check if firmware update is possible):"
+        android:textColor="@color/black"></TextView>
+
+    <EditText
+        android:id="@+id/editTextMacAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:layout_below="@id/textViewMacAddress"></EditText>
+
+    <Button
+        android:id="@+id/buttonMacAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextMacAddress"
+        android:text="Change device" />
+
+    <Button
+        android:id="@+id/buttonPossible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonMacAddress"
+        android:text="Check if firmware update is possible" />
+
+    <Button
+        android:id="@+id/buttonUserConfirmation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonPossible"
+        android:text="Confirm that user wants to update" />
+
+    <Button
+        android:id="@+id/buttonFota"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonUserConfirmation"
+        android:text="Do firmware update" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/buttonFota">
+    <TextView
+        android:id="@+id/text_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonFota"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:textColor="#0c377b"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+    </ScrollView>
+
+</RelativeLayout>
